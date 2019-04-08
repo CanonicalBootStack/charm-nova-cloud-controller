@@ -456,7 +456,7 @@ class NovaMetadataContext(ch_context.OSContextGenerator):
         cmp_os_release = ch_utils.CompareOpenStackReleases(
             ch_utils.os_release('nova-common'))
         ctxt = {}
-        if cmp_os_release >= 'rocky':
+        if cmp_os_release >= 'queens':
             vdata_providers = []
             vdata = hookenv.config('vendor-data')
             vdata_url = hookenv.config('vendor-data-url')
